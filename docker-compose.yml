@@ -1,0 +1,5 @@
+services:
+  frontend:
+    image: nhuhuynh66/mern-frontend:2.0
+    ports:
+      - "3000:5173"
