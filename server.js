@@ -1,11 +1,20 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
+const cors = require("cors");
 const Student = require("./models/Student");
 
 require("dotenv").config({ path: path.join(__dirname, ".env") });
 
 const app = express();
+
+app.use(cors({
+    origin: [
+        "https://mern-frontend-235931.onrender.com",
+        "http://localhost:5173"
+    ]
+}));
+
 app.use(express.json());
 
 const PORT = Number(process.env.PORT) || 5000;
