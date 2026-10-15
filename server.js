@@ -130,4 +130,17 @@ app.delete('/api/students/:id', async (req, res) => {
             student
         });
     } catch (err) {
-        res.status(400).json({
+        res.status(400).json({```javascript
+            message: 'Lỗi xóa sinh viên',
+            error: err.message
+        });
+    }
+});
+
+// Khởi động Server
+const PORT = Number(process.env.PORT) || 5000;
+
+app.listen(PORT, () => {
+    console.log(`Server đang chạy tại cổng ${PORT}`);
+});
+```
