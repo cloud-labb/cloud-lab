@@ -1,7 +1,6 @@
-```yaml
 name: Build and Push Backend Docker Image
 
-on:
+'on':
   push:
     branches:
       - main
@@ -13,7 +12,6 @@ on:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4
@@ -34,4 +32,3 @@ jobs:
           file: ./server/Dockerfile
           push: true
           tags: nhuhuynh66/mern-backend:1.1
-```
